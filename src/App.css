@@ -126,6 +126,10 @@ body {
 ._hover03:hover a {
   color: #FFFFFF;
 }
+.loader {
+  text-align: center;
+  margin-top: 20px;
+}
 
 .pop-user-set:target,
 .pop-exit:target,
@@ -880,7 +884,7 @@ body {
   padding: 0;
 }
 .header__pop-user-set {
-  display: none;
+  display: block;
   position: absolute;
   top: 61px;
   right: 0;
