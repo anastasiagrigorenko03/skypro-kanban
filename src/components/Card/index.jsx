@@ -1,9 +1,9 @@
+const colors = {
+	"Web Design": "_orange",
+	"Copywriting": "_purple",
+	"Research": "_green",
+}
 export const Card = ({title, topic, date}) => {
-	const colors = {
-		 "Web Design": "_orange",
-		 "Copywriting": "_purple",
-		 "Research": "_green",
-	}
     return (
         <div className="cards__item">
 									<div className="cards__card card">
