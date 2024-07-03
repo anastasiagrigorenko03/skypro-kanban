@@ -6,6 +6,7 @@ import { PopUser } from "./components/PopUser";
 import './App.css'
 import { useEffect, useState } from "react";
 import { tasks } from "./data";
+import { GlobalStyle, Wrapper } from "./globalStyle.styled.js";
 function App() {
   const [cards, setCards] = useState(tasks)
   const [isLoading, setIsLoading] = useState (false)
@@ -29,13 +30,17 @@ setIsLoading(false)
   }, []);
 
   return (
-    <div className="wrapper">
+    <>
+    <GlobalStyle/>
+     <Wrapper>
 		<Header addCard={addCard} />
     {isLoading ? <p className="loader">Loading...</p> : <Main cards ={cards} />}
     <PopBrowse/>
     <PopNewCard/>
     <PopUser/>
-    </div>
+    </Wrapper>
+    </>
+   
   )
 }
 export default App
