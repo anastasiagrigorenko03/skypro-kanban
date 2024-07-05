@@ -1,13 +1,13 @@
-import styled, { createGlobalStyle } from "styled-components";
+import {styled, createGlobalStyle, css } from "styled-components";
+
 export const GlobalStyle = createGlobalStyle`
+*:before,
+*:after {
+  box-sizing: border-box;
+}
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-*:before,
-*:after {
   box-sizing: border-box;
 }
 
@@ -34,7 +34,10 @@ body {
   color: #000000;
 }
 `;
-
+export const Loader = styled.p`
+text-align: center;
+margin-top: 20px;
+`;
 
 export const Wrapper = styled.div`
   max-width: 100%;
@@ -50,6 +53,33 @@ export const Container = styled.div`
   margin: 0 auto;
   padding: 0 30px;
 `;
+
+
+export const Orange = css`
+background-color: ${({theme}) => theme.orangeBg};
+color: ${({theme}) => theme.orangeText};
+`;
+
+export const Green = css`
+background-color: ${({theme}) => theme.greenBg};
+color: ${({theme}) => theme.greenText};
+`;
+
+export const Purple = css`
+background-color: ${({theme}) => theme.purpleBg};
+color: ${({theme}) => theme.purpleText};
+`;
+
+export const Grey = css`
+background: ${({theme}) => theme.greyBg};
+color: ${({theme}) => theme.greyText};
+`;
+
+export const themeColor =($color) => css`
+  ${$color === "Web Disign" && Orange} 
+  ${$color === "Copywriting" && Purple} 
+  ${$color === "Research" && Green} 
+`
 
 
 export const Hover01 = css`
@@ -68,3 +98,13 @@ export const Hover02 = css`
    }
  }
 `
+export const Hover03 = css`
+&:hover {
+  background-color: #33399b;
+  color: #FFFFFF;
+}
+a {
+  color: #FFFFFF;
+}
+`;
+
