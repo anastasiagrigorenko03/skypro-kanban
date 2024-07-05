@@ -2,7 +2,7 @@ import { Calendar } from "../Calendar";
 export const PopBrowse = () => {
     return (
         <div className="pop-browse" id="popBrowse">
-        <div className="pop-browse__container">
+          <div className="pop-browse__container">
             <div className="pop-browse__block">
                 <div className="pop-browse__content">
                     <div className="pop-browse__top-block">
@@ -10,7 +10,6 @@ export const PopBrowse = () => {
                         <div className="categories__theme theme-top _orange _active-category">
                             <p className="_orange">Web Design</p>
                         </div>
-                        <Calendar />
                     </div>
                     <div className="pop-browse__status status">
                         <p className="status__p subttl">Статус</p>
@@ -35,10 +34,11 @@ export const PopBrowse = () => {
                     <div className="pop-browse__wrap">
                         <form className="pop-browse__form form-browse" id="formBrowseCard" action="#">									
                             <div className="form-browse__block">
-                                <label for="textArea01" className="subttl">Описание задачи</label>
-                                <textarea className="form-browse__area" name="text" id="textArea01"  readonly placeholder="Введите описание задачи..."></textarea>
+                                <label htmlFor="textArea01" className="subttl">Описание задачи</label>
+                                <textarea className="form-browse__area" name="text" id="textArea01"     readOnly placeholder="Введите описание задачи..."></textarea>
                             </div>
                         </form>
+                        <Calendar />
                     </div>
                     <div className="theme-down__categories theme-down">
                         <p className="categories__p subttl">Категория</p>
